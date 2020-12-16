@@ -17,5 +17,6 @@ class Item(models.Model):
     condition = models.CharField(max_length=100, default='')
     description = models.CharField(max_length=200)
     classification = models.CharField(max_length=100, default='')
+    item_type = models.CharField(max_length=100, default='')
     image = models.ImageField(
-        upload_to='media/', default='media/default.jpg')
+        upload_to='media/', default='media/NoImage.jpg')

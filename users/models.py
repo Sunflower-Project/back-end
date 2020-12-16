@@ -8,6 +8,8 @@ class User(AbstractUser):
     email = models.EmailField(verbose_name='email',
                               max_length=255, unique=True)
     avatar = models.CharField(max_length=500)
+    profile_picture = models.ImageField(
+        upload_to='media/profiles/', default='media/NoImage.jpg')
     REQUIRED_FIELDS = ['username']
     USERNAME_FIELD = 'email'
 

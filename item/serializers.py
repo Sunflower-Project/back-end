@@ -19,13 +19,26 @@ CLASSIFICATION = (
     ('Upcycle')
 )
 
+ITEM_TYPE = (
+    ('Wooden Chair'),
+    ('Wooden Bench'),
+    ('Armchair'),
+    ('Swingset'),
+    ('Toy Truck'),
+    ('Toy Car'),
+    ('Toy Wagon'),
+    ('Table'),
+    ('Ladder')
+)
+
 class ItemSerializer(serializers.ModelSerializer):
     category = serializers.ChoiceField(choices = ITEM_CATEGORIES)
     condition = serializers.ChoiceField(choices = CONDITION_CATEGORIES)
     classification = serializers.ChoiceField(choices = CLASSIFICATION)
+    item_type = serializers.ChoiceField(choices = ITEM_TYPE)
     class Meta:
         model = Item
-        fields = ('id', 'name', 'category', 'condition', 'description', 'classification', 'image')
+        fields = ('id', 'name', 'category', 'condition', 'description', 'classification', 'item_type', 'image')
 
 class CommentSerializer(serializers.ModelSerializer):
 
