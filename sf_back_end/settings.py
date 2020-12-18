@@ -20,6 +20,7 @@ ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = ['https://sunflowerapp.herokuapp.com/']
 
 ROOT_URLCONF = 'sf_back_end.urls'
 
